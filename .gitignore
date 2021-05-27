@@ -1,6 +1,10 @@
 ﻿node_modules
 
+
 design
+
+*.map
+
 
 # Avoid accidental Sketch file upload 
 ###############################################

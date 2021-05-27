@@ -1,0 +1,62 @@
+@mixin font_500{
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: $DarkBlue;
+}
+
+@mixin font_400{
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: $DarkBlue;
+}
+
+@mixin font_600{
+    font-size: 1.375rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: $GrayishBlue;
+}
+
+@mixin font_700{
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: $GrayishBlue;
+}  
+
+
+
+@mixin hoverEffect {
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        transform: scale(0);
+        transform-origin: center;
+        background: $DarkBlue;
+        transition: all .3s ease-in-out;
+    }
+    &:hover::after{
+        transform: scale(1);
+    }
+}
+
+
+@mixin flexBt {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin bgControl {
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+}

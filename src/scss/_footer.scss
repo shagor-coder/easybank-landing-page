@@ -1,0 +1,108 @@
+.footer{
+    width: 100%;
+    min-height: 180px;
+    margin: auto;
+    background: $DarkBlue;
+
+    &__cl-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        &__logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            img{
+                width: 164px;
+            }
+        }
+        &__sci{
+            justify-content: center;
+            padding: 1rem 0 0 0;
+    
+            &__icon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: .5rem;
+                border-radius: 50%;
+                transition: all .3s ease-in-out;
+                &:not(:last-child){
+                    margin-right: 1rem;
+                }
+                &:hover{
+                    transform: scale(1.2);
+                    box-shadow: 0px 0px 10px $LightGrayishBlue;
+                }
+            }
+        }
+    }
+    
+    &__sitemap{
+        @include flexBt;
+
+
+        &__wrapper{
+            @include flexBt;
+            flex-direction: column;
+            align-items: flex-start !important;
+
+            &__item{
+                display: inline-block;
+                padding: .5rem 1rem;
+                margin: .1rem;
+            }
+
+            &__link{
+                width: max-content;
+                @include font_700;
+                color: $White;
+                @include hoverEffect;
+
+                
+                &::after{
+                    background: $White !important;
+               }
+            }
+        }
+
+        @media (max-width:768px){
+            justify-content: center;
+            flex-direction: column !important;
+
+            &__wrapper{
+                align-items: center !important;
+            }
+        }
+    }
+
+    &__cta{
+        @media (min-width:768px){
+            margin-left: 20px;
+        }
+    }
+
+
+    
+    &__copyright{
+        @include font_700;
+        text-align: center;
+    }
+}
+
+
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    background: $GrayishBlue;
+    @include font_700;
+    color: $White;
+    a { 
+     color: $VeryLightGray;
+    }
+}
+ 
